@@ -49,7 +49,7 @@ $(document).ready(function() {
   $createTodo.on('submit', function (event) {
     event.preventDefault();
 
-    // serialze form data
+    // serialize form data
     var newTodo = $(this).serialize();
 
     // POST request to create new todo
@@ -88,7 +88,7 @@ $(document).ready(function() {
         return todo._id == todoId;
       });
 
-      // serialze form data
+      // serialize form data
       var updatedTodo = $(this).serialize();
 
       // PUT request to update todo

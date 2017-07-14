@@ -52,12 +52,15 @@ app.get('/api/todos/search', function search(req, res) {
 app.get('/api/todos', function index(req, res) {
   /* This endpoint responds with all of the todos
    */
+   console.log('index get', todos);
+   res.json({data:todos});
 });
 
 app.post('/api/todos', function create(req, res) {
   /* This endpoint will add a todo to our "database"
    * and respond with the newly created todo.
    */
+
 });
 
 app.get('/api/todos/:id', function show(req, res) {
