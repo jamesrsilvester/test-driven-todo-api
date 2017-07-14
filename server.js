@@ -67,6 +67,13 @@ app.get('/api/todos/:id', function show(req, res) {
   /* This endpoint will return a single todo with the
    * id specified in the route parameter (:id)
    */
+    console.log(req.params.id);
+    for (let i=0; i<todos.length; i++) {
+      console.log("moving through loop index is", i);
+      if (todos[i]._id==req.params.id) {
+        res.json(todos[i]);
+      }
+    }
 });
 
 app.put('/api/todos/:id', function update(req, res) {
